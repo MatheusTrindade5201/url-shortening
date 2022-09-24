@@ -1,0 +1,14 @@
+:root{
+    --ciano: #2acfcf;
+    --violeta-escuro: #3b3054;
+    --vermelho: #f46262;
+    --cinza: #bfbfbf;
+    --violeta-cinzento: #9e9aa7;
+    --azul-extra-escuro: #35323e;
+    --violeta-extra-escuro: #232127;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
