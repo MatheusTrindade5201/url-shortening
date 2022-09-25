@@ -12,12 +12,29 @@
 
 </head>
 <body>
-
+  <header class="cabecalho">
+    <img src="images/logo.svg" alt="Logo">
+    <input type="checkbox" name="menu-hamburguer" id="menu-hamburguer">
+    <label for="menu-hamburguer">
+      <i class="fa-sharp fa-solid fa-bars cabecalho__menu-hamburguer__icone"></i>
+    </label>
+    <nav class="cabecalho__menu-mobile">
+      <ul class="cabecalho__menu-mobile-lista">
+        <li class="cabecalho__menu-mobile-lista__item"><a href="#" class="menu__link">Features</a></li>
+        <li class="cabecalho__menu-mobile-lista__item"><a href="#" class="menu__link">Pricing</a></li>
+        <li class="cabecalho__menu-mobile-lista__item"><a href="#" class="menu__link">Resources</a></li>
+      </ul>
+      <div class="cabecalho__menu-mobiler__usuario">
+        <a href="#" class="usuario__link usuario__login">Login</a>
+        <a href="#" class="usuario__link usuario__signUp">Sign Up</a>
+      </div>
+    </nav>
+  </header>
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
   <script src="https://kit.fontawesome.com/a6a7f11b84.js" crossorigin="anonymous"></script>
 </body>
 </html>

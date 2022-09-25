@@ -1,3 +1,5 @@
+@import url('cabecalho.css');
+
 :root{
     --ciano: #2acfcf;
     --violeta-escuro: #3b3054;
@@ -6,6 +8,7 @@
     --violeta-cinzento: #9e9aa7;
     --azul-extra-escuro: #35323e;
     --violeta-extra-escuro: #232127;
+    --branco: #FFFFFF;
 }
 
 body {
