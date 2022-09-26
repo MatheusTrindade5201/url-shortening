@@ -4,13 +4,14 @@
     width: 100vw;
     align-items: center;
     margin-bottom: 5rem;
+    overflow: hidden;
 }
 
 .introducao__imagem {
     object-fit: cover;
     max-width: 500px;
     max-height: 410px;
-    overflow-x: hidden;
+    overflow:hidden;
     transform: translateX(15%);
 }
 
