@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 2rem 1rem 1rem 1rem ;
+    margin: 2rem 1rem 1rem 1rem ;
 }
 
 #menu-hamburguer {
@@ -19,16 +19,16 @@
     background-color: var(--violeta);
     border-radius: 10px;
     display: none;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
+    padding: 1.5rem;
+    right: 0;
     top: 12vh;
     text-align: center;
     width: 70vw;
-    padding: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
+    z-index: 2;
 }
 
 .menu__link, .usuario__link {
@@ -37,15 +37,15 @@
     text-decoration: none;
 }
 
-.cabecalho__menu-mobile-lista {
+.cabecalho__lista {
     padding-bottom: 1rem;
 }
 
-.cabecalho__menu-mobile-lista__item, .usuario__link{
+.cabecalho__item, .usuario__link{
     padding: 1rem;
 }
 
-.cabecalho__menu-mobiler__usuario{
+.cabecalho__usuario{
     border-top: 1px solid var(--violeta-cinzento);
     display: flex;
     flex-direction: column;
