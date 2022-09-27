@@ -33,6 +33,7 @@
 
 .sobre__item{
     background-color: var(--branco);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
