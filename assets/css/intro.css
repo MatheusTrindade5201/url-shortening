@@ -38,7 +38,7 @@
     margin-bottom: 2rem;
 }
 
-.introducao__botao {
+.introducao__botao, .botao {
     color: var(--branco);
     background-color: var(--ciano);
     border-radius: 24px;
