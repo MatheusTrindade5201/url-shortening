@@ -1,6 +1,7 @@
 @import url('cabecalho.css');
 @import url('intro.css');
 @import url('encurtador.css');
+@import url('sobre.css');
 
 :root{
     --ciano: #2acfcf;
