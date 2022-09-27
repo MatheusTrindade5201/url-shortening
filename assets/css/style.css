@@ -1,5 +1,6 @@
 @import url('cabecalho.css');
 @import url('intro.css');
+@import url('encurtador.css');
 
 :root{
     --ciano: #2acfcf;
@@ -7,6 +8,7 @@
     --violeta-escuro: #3b3054;
     --vermelho: #f46262;
     --cinza: #bfbfbf;
+    --cinza-claro: #f7f7f7;
     --violeta-cinzento: #9e9aa7;
     --azul-extra-escuro: #35323e;
     --violeta-extra-escuro: #232127;
@@ -14,6 +16,7 @@
 }
 
 body {
+    background-color: var(--cinza-claro);
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
 }

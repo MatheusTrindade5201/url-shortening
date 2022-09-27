@@ -1,9 +1,10 @@
 .cabecalho {
     align-items: center;
+    background-color: var(--branco);
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin: 2rem 1rem 1rem 1rem ;
+    padding: 2rem 1rem 1rem 1rem ;
 }
 
 #menu-hamburguer {

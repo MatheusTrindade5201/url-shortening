@@ -1,9 +1,10 @@
 .introducao {
+    background-color: var(--branco);
     display: flex;
     flex-direction: column;
     width: 100vw;
     align-items: center;
-    margin-bottom: 5rem;
+    padding-bottom: 10rem;
     overflow: hidden;
 }
 
