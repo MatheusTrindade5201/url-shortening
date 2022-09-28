@@ -9,9 +9,6 @@
 }
 
 .introducao__imagem {
-    object-fit: cover;
-    max-width: 500px;
-    max-height: 410px;
     overflow:hidden;
     transform: translateX(15%);
 }
@@ -46,4 +43,54 @@
     padding: 1rem 2rem;
     text-align: center;
     text-decoration: none;
+}
+
+@media screen and (min-width: 930px) {
+    .introducao {
+        padding: 0 10vw 10rem 10vw;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .introducao__descricao {
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .introducao__titulo {
+        font-size: 3.8rem;
+        text-align: start;
+    }
+
+    .introducao__texto {
+        text-align: start;
+        padding-right: 6rem;
+    }
+
+    .introducao__imagem {
+        transform:none;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .introducao__titulo {
+        font-size: 5rem;
+    }
+
+    .introducao__texto {
+        font-size: 1.5rem;
+    }
+
+    .introducao__imagem {
+        width: 90%;
+        height: auto;
+    }
+
+    .introducao__botao {
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem;
+        border-radius: 50px;
+    }
+
 }
