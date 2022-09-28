@@ -14,7 +14,7 @@
   <header class="cabecalho">
     <img src="images/logo.svg" alt="Logo">
     <input type="checkbox" name="menu-hamburguer" id="menu-hamburguer">
-    <label for="menu-hamburguer">
+    <label for="menu-hamburguer" class="cabecalho__menu-hamburguer">
       <i class="fa-sharp fa-solid fa-bars cabecalho__menu-hamburguer__icone"></i>
     </label>
     <nav class="cabecalho__menu-mobile">
@@ -26,6 +26,17 @@
       <div class="cabecalho__usuario">
         <a href="#" class="usuario__link usuario__login">Login</a>
         <a href="#" class="usuario__link usuario__signUp">Sign Up</a>
+      </div>
+    </nav>
+    <nav class="cabecalho__menu-desktop">
+      <ul class="cabecalho__lista-desktop">
+        <li class="cabecalho__item-desktop"><a href="#" class="menu__link-desktop">Features</a></li>
+        <li class="cabecalho__item-desktop"><a href="#" class="menu__link-desktop">Pricing</a></li>
+        <li class="cabecalho__item-desktop"><a href="#" class="menu__link-desktop">Resources</a></li>
+      </ul>
+      <div class="cabecalho__usuario-desktop">
+        <a href="#" class="usuario__link-dektop usuario__login-desktop">Login</a>
+        <a href="#" class="usuario__link-dektop usuario__signUp-desktop">Sign Up</a>
       </div>
     </nav>
   </header>
@@ -44,13 +55,13 @@
         <input type="text" name="urlOriginal" id="urlOriginal" class="encurtador__input" placeholder="Shorten a link here...">
         <button class="encurtador__botao-de-acao">Shorten It!</button>
       </div>
-      <!-- <ul class="encurtador__processados">
+      <ul class="encurtador__processados">
         <li class="encurtador__item">
           <p class="encurtador__link-original">test</p>
           <p class="encurtador__link-resultado">test</p>
           <button class="encurtador__botao-copiar">Copy</button>
         </li>
-      </ul> -->
+      </ul>
     </section>
     <section class="sobre">
       <div class="sobre__descricao">
