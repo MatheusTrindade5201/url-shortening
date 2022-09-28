@@ -39,9 +39,10 @@
     border: none;
     border-radius: 5px;
     color: var(--branco);
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
     padding: .8rem .5rem ;
+    transition: .2s;
 }
 
 .encurtador__processados {
@@ -77,4 +78,34 @@
     font-weight: 700;
     padding: .5rem 0;
     margin: 0 1rem 1rem 1rem;
+    transition: .2s;
+}
+
+@media screen and (min-width: 930px) {
+    .encurtador__form {
+        background-image: url('../../images/bg-shorten-desktop.svg');
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem;
+    }
+
+    .encurtador__input {
+        margin-bottom: 0;
+        flex-grow: 1;
+        padding: 1rem 2rem;
+    }
+    
+    .encurtador__botao-de-acao {
+        margin-left: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .encurtador__botao-copiar:hover {
+        opacity: .4;
+    }
+
+    .encurtador__botao-de-acao:hover {
+        background-color: var(--ciano-opaco);
+    }
 }

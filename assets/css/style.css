@@ -6,6 +6,7 @@
 @import url('rodape.css');
 
 :root{
+    --ciano-opaco: #c5f3f3;
     --ciano: #2acfcf;
     --violeta: #383050;
     --violeta-escuro: #3b3054;
