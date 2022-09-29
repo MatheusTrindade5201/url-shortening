@@ -27,6 +27,7 @@
     color: var(--violeta-cinzento);
     font-size: .9rem;
     text-decoration: none;
+    transition: .2s;
 }
 
 .rodape__lista-social {
@@ -34,4 +35,46 @@
     justify-content: space-around;
     margin: 2rem 0;
     width: 187px;
+}
+
+@media screen and (min-width: 930px) {
+    .rodape {
+        flex-direction: row;
+        padding-right: 10vw;
+        padding-left: 10vw;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .rodape__logo {
+        max-width: 121px;
+        flex-grow: 1;
+        padding-right: 4rem;
+    }
+
+    .rodape__lista {
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .rodape__item-titulo {
+        padding-top: 0;
+    }
+
+    .rodape__lista-social {
+        margin: 0;
+        margin-left: 2rem;
+    }
+
+    .rodape__link:hover {
+        color: var(--ciano);
+    }
+
+    .rodape__link-social path{
+        transition: .2s;
+    }
+
+    .rodape__link-social:hover path {
+        fill: var(--ciano);
+    }
 }
