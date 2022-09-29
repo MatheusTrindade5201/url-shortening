@@ -17,6 +17,7 @@
     padding: 1rem 2rem;
     text-align: center;
     text-decoration: none;
+    transition: .2s;
 }
 
 .getStarted__titulo {
@@ -24,4 +25,22 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 930px) {
+    .getStarted {
+        background-image: url('../../images/bg-boost-desktop.svg');
+    }
+
+    .getStarted__titulo {
+        font-size: 2.5rem;
+    }
+    
+    .getStarted__botao {
+        font-size: 1.5rem;
+    }
+
+    .getStarted__botao:hover {
+        background-color: var(--ciano-opaco);
+    }
 }
