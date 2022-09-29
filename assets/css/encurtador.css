@@ -85,6 +85,8 @@
 .mensagem__erro {
     color: var(--vermelho);
     display: none;
+    font-size: .8rem;
+    padding-bottom: .5rem;
 }
 
 .mensagem__erro-ativo {
@@ -129,6 +131,7 @@
     .mensagem__erro {
         display: block;
         visibility: hidden;
+        font-size: 1rem;
     }
 
     .mensagem__erro-ativo {
