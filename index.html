@@ -52,8 +52,11 @@
     </section>
     <section class="encurtador">
       <div class="encurtador__form">
-        <input type="text" name="urlOriginal" id="urlOriginal" class="encurtador__input" placeholder="Shorten a link here...">
-        <button class="encurtador__botao-de-acao">Shorten It!</button>
+        <div class="encurtador__input-container">
+          <input type="text" name="urlOriginal" id="urlOriginal" class="encurtador__input" placeholder="Shorten a link here...">
+          <p class="mensagem__erro" id="mensagem__erro">Please add a link</p>
+        </div>
+        <button class="encurtador__botao-de-acao" id="encurtador__botao">Shorten It!</button>
       </div>
       <ul class="encurtador__processados">
         <!-- <li class="encurtador__item">

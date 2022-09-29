@@ -25,8 +25,9 @@
     border: none;
     border-radius: 5px;
     font-size: 18px;
-    padding: .8rem .5rem ;
+    padding: .8rem .5rem;
     margin-bottom: 1rem;
+    width: calc(100% - 1rem);
 }
 
 .encurtador__input::placeholder {
@@ -81,6 +82,24 @@
     transition: .2s;
 }
 
+.mensagem__erro {
+    color: var(--vermelho);
+    display: none;
+}
+
+.mensagem__erro-ativo {
+    display: block;
+}
+
+.encurtador__input-erro {
+    border: 2px solid var(--vermelho);
+}
+
+.encurtador__input-erro::placeholder {
+    color: var(--vermelho);
+    opacity: .5;
+}
+
 @media screen and (min-width: 930px) {
     .encurtador {
         padding: 0 10vw;
@@ -90,18 +109,30 @@
         background-position: center;
         background-size: cover;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        padding: 3rem 0;
+        padding: 4rem 0 2rem 0;
         margin: 0;
         width: 100%;
     }
 
     .encurtador__input {
-        margin-left: 3rem;
-        margin-bottom: 0;
-        flex-grow: 1;
+        width: 90%;
         padding: 1rem 2rem;
+    }
+
+    .encurtador__input-container {
+        flex-grow: 1;
+        margin-left: 3rem;
+    }
+
+    .mensagem__erro {
+        display: block;
+        visibility: hidden;
+    }
+
+    .mensagem__erro-ativo {
+        visibility: visible;
     }
     
     .encurtador__botao-de-acao {
