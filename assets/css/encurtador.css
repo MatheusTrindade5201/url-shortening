@@ -46,8 +46,8 @@
 }
 
 .encurtador__processados {
-    margin: -50px 10%;
-    width: 90%;
+    margin: -50px 5%;
+    width: 85%;
 }
 
 .encurtador__item {
@@ -82,22 +82,31 @@
 }
 
 @media screen and (min-width: 930px) {
+    .encurtador {
+        padding: 0 10vw;
+    }
     .encurtador__form {
         background-image: url('../../images/bg-shorten-desktop.svg');
+        background-position: center;
+        background-size: cover;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 3rem;
+        padding: 3rem 0;
+        margin: 0;
+        width: 100%;
     }
 
     .encurtador__input {
+        margin-left: 3rem;
         margin-bottom: 0;
         flex-grow: 1;
         padding: 1rem 2rem;
     }
     
     .encurtador__botao-de-acao {
-        margin-left: 1rem;
+        margin-right: 3rem;
+        margin-left: 1.5rem;
         padding: 1rem 2rem;
     }
 
@@ -107,5 +116,35 @@
 
     .encurtador__botao-de-acao:hover {
         background-color: var(--ciano-opaco);
+    }
+
+    .encurtador__processados {
+        width: 100%;
+    }
+
+    .encurtador__item  {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+    }
+
+    .encurtador__botao-copiar{
+        margin: 0;
+        padding: .5rem 1.5rem;
+    }
+    .encurtador__botao-copiar:hover {
+        opacity: .4;
+    }
+
+    .encurtador__link-original {
+        padding: 0;
+        border: none;
+        flex-grow: 3;
+    }
+
+    .encurtador__link-resultado {
+        padding: 0;
+        flex-grow: 1;
     }
 }
