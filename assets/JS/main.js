@@ -38,12 +38,12 @@ const encurtaURL = async () => {
     try{
     const resp = await encurtaURL();
     const urlCurta = await resp.result.short_link;
-    console.log(urlCurta);
     return urlCurta;
     }catch(e){
         console.log(e.message);
     }
  }
+ 
 
  const incluiLinkEncurtado = async () => {
     var li = novoEncurtadorItem();
@@ -62,7 +62,11 @@ const encurtaURL = async () => {
     li.appendChild(pLinkResultado);
     li.appendChild(btn);
 
+    sessionStorage.setItem(pLinkResultado.innerHTML, await criaObjeto()); 
+    
     input.value = ''
+
+    
 
     btn.addEventListener('click', function (e) {
         const botoes = document.querySelectorAll('.encurtador__botao-copiar')
@@ -76,6 +80,15 @@ const encurtaURL = async () => {
         e.target.classList.add('copiado')
     })
 
+ }
+
+ const criaObjeto = async () => {
+    var item = JSON.stringify({
+        link_original: input.value,
+        link_resultado: await buscaUrl()
+    })
+
+    return item
  }
 
  const novoEncurtadorItem = () => {
@@ -95,7 +108,6 @@ const novoLinkResultado = async () => {
     var linkResultado = document.createElement('p');
     linkResultado.classList.add('encurtador__link-resultado');
     linkResultado.innerHTML = await buscaUrl();
-    console.log(linkResultado)
     return linkResultado; 
 }
 
