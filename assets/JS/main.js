@@ -4,17 +4,20 @@ const mensagemErro = document.getElementById('mensagem__erro');
 const urlBase = 'https://api.shrtco.de/v2/shorten?url=';
 const listaLinks = document.getElementById('encurtador__processados');
 
-botao.addEventListener('click', validaInput)
+botao.addEventListener('click', function () {
+    validaInput();
+    if(input.value){
+        incluiLinkEncurtado()
+    }
+})
 
 function validaInput () {
     if(!input.value){
         input.classList.add('encurtador__input-erro');
         mensagemErro.classList.add('mensagem__erro-ativo');
-        return false;
     }else {
         input.classList.remove('encurtador__input-erro');
         mensagemErro.classList.remove('mensagem__erro-ativo');
-        return true;
     }
 }
 
