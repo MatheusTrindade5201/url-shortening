@@ -44,6 +44,7 @@
     font-weight: 700;
     padding: .8rem .5rem ;
     transition: .2s;
+    cursor: pointer;
 }
 
 .encurtador__processados {
