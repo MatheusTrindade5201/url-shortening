@@ -65,6 +65,12 @@ const encurtaURL = async () => {
     input.value = ''
 
     btn.addEventListener('click', function (e) {
+        const botoes = document.querySelectorAll('.encurtador__botao-copiar')
+        botoes.forEach(n => {
+            n.innerHTML = 'Copy';
+            n.classList.remove('copiado')
+        });
+
         navigator.clipboard.writeText(pLinkResultado.innerHTML)
         e.target.innerHTML = 'Copied!'
         e.target.classList.add('copiado')
@@ -98,8 +104,4 @@ const novoBotao = () => {
     novoBotaoCopiar.classList.add('encurtador__botao-copiar');
     novoBotaoCopiar.innerHTML = 'Copy';
     return novoBotaoCopiar;
-}
-
-const copia = () => {
-
 }
