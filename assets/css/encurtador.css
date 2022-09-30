@@ -60,8 +60,15 @@
 }
 
 .encurtador__link-original {
-    padding: 1rem ;
+    padding: 1rem;
+    margin-right: 1rem;
     border-bottom: 2px solid var(--cinza-claro);
+    white-space: nowrap;
+    overflow:scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 .encurtador__link-resultado {
@@ -172,13 +179,13 @@
     }
 
     .encurtador__link-original {
-        padding: 0;
+        padding: .5rem 0;
         border: none;
         flex-grow: 3;
     }
 
     .encurtador__link-resultado {
-        padding: 0;
+        padding: 0 1rem;
         flex-grow: 1;
     }
 }
