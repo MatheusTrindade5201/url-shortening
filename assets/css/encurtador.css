@@ -90,6 +90,10 @@
     transition: .2s;
 }
 
+.copiado {
+    background-color: var(--violeta-escuro);
+}
+
 .mensagem__erro {
     color: var(--vermelho);
     display: none;

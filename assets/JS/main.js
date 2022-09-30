@@ -51,10 +51,24 @@ const encurtaURL = async () => {
     var pLinkResultado = await novoLinkResultado();
     var btn = novoBotao();
 
+    if(pLinkResultado.innerHTML == 'undefined'){
+        input.value = ''
+        alert('Link invalido')
+        return
+    }
+
     listaLinks.appendChild(li);
     li.appendChild(pLinkOriginal);
     li.appendChild(pLinkResultado);
     li.appendChild(btn);
+
+    input.value = ''
+
+    btn.addEventListener('click', function (e) {
+        navigator.clipboard.writeText(pLinkResultado.innerHTML)
+        e.target.innerHTML = 'Copied!'
+        e.target.classList.add('copiado')
+    })
 
  }
 
@@ -84,4 +98,8 @@ const novoBotao = () => {
     novoBotaoCopiar.classList.add('encurtador__botao-copiar');
     novoBotaoCopiar.innerHTML = 'Copy';
     return novoBotaoCopiar;
+}
+
+const copia = () => {
+
 }
