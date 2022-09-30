@@ -140,6 +140,7 @@
         display: block;
         visibility: hidden;
         font-size: 1rem;
+        padding-bottom:0;
     }
 
     .mensagem__erro-ativo {
