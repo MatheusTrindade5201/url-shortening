@@ -69,10 +69,10 @@ const consomeSessionStorage = () => {
                 n.innerHTML = 'Copy';
                 n.classList.remove('copiado')
             });
-    
-            navigator.clipboard.writeText(pLinkResultado.innerHTML)
-            e.target.innerHTML = 'Copied!'
-            e.target.classList.add('copiado')
+            var linkCopiado = e.target.previousElementSibling.innerHTML;
+            navigator.clipboard.writeText(linkCopiado);
+            e.target.innerHTML = 'Copied!';
+            e.target.classList.add('copiado');
         })
     }
 }
@@ -108,9 +108,10 @@ const consomeSessionStorage = () => {
             n.classList.remove('copiado')
         });
 
-        navigator.clipboard.writeText(pLinkResultado.innerHTML)
-        e.target.innerHTML = 'Copied!'
-        e.target.classList.add('copiado')
+        var linkCopiado = e.target.previousElementSibling.innerHTML;
+        navigator.clipboard.writeText(linkCopiado);
+        e.target.innerHTML = 'Copied!';
+        e.target.classList.add('copiado');
     })
 
  }
