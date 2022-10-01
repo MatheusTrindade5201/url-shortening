@@ -17,7 +17,7 @@ O usuário deve ser capaz de:
 - [x] Receber uma mensagem de erro quando o formulário para avisos enviado estiver:
     - Com o campo vazio
 . Funcionalidade pessoal adicional:
-- [ ] Esxcluir item da lista. (Em desenvolvimento)
+- [ ] Excluir item da lista. (Em desenvolvimento)
    
 
 ## Preview do produto final
