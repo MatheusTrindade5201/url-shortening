@@ -1,6 +1,6 @@
 .getStarted {
     background-color: var(--violeta-escuro);
-    background-image: url('../../images/bg-boost-mobile.svg');
+    background-image: url('../images/bg-boost-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 930px) {
     .getStarted {
-        background-image: url('../../images/bg-boost-desktop.svg');
+        background-image: url('../images/bg-boost-desktop.svg');
     }
 
     .getStarted__titulo {

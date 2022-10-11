@@ -119,7 +119,7 @@
         padding: 0 10vw;
     }
     .encurtador__form {
-        background-image: url('../../images/bg-shorten-desktop.svg');
+        background-image: url('../images/bg-shorten-desktop.svg');
         background-position: center;
         background-size: cover;
         flex-direction: row;
