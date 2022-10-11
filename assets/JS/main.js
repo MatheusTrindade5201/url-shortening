@@ -25,7 +25,7 @@ function validaInput () {
 
 const encurtaURL = async () => {
     try{
-        var urlLonga = input.value;
+        let urlLonga = input.value;
         const data = await fetch(urlBase + urlLonga);
         const json = await data.json();
         console.log(json);
@@ -50,13 +50,13 @@ const consomeSessionStorage = () => {
         return
     }
     for(let i = 0; i < localStorage.length; i++){
-        var key = localStorage.key(i)
-        var item = localStorage.getItem(key)
-        var objeto = JSON.parse(item)
-        var li = novoEncurtadorItem();
-        var pLinkOriginal = LinkOriginalStorage(objeto.link_original);
-        var pLinkResultado = LinkResultadoStorage(objeto.link_resultado); 
-        var btn = novoBotao();
+        let key = localStorage.key(i)
+        let item = localStorage.getItem(key)
+        let objeto = JSON.parse(item)
+        let li = novoEncurtadorItem();
+        let pLinkOriginal = LinkOriginalStorage(objeto.link_original);
+        let pLinkResultado = LinkResultadoStorage(objeto.link_resultado); 
+        let btn = novoBotao();
 
         listaLinks.appendChild(li);
         li.appendChild(pLinkOriginal);
@@ -69,7 +69,7 @@ const consomeSessionStorage = () => {
                 n.innerHTML = 'Copy';
                 n.classList.remove('copiado')
             });
-            var linkCopiado = e.target.previousElementSibling.innerHTML;
+            let linkCopiado = e.target.previousElementSibling.innerHTML;
             navigator.clipboard.writeText(linkCopiado);
             e.target.innerHTML = 'Copied!';
             e.target.classList.add('copiado');
@@ -79,10 +79,10 @@ const consomeSessionStorage = () => {
 
 
  const incluiLinkEncurtado = async () => {
-    var li = novoEncurtadorItem();
-    var pLinkOriginal = novoLinkOriginal();
-    var pLinkResultado = await novoLinkResultado();
-    var btn = novoBotao();
+    let li = novoEncurtadorItem();
+    let pLinkOriginal = novoLinkOriginal();
+    let pLinkResultado = await novoLinkResultado();
+    let btn = novoBotao();
 
     if(pLinkResultado.innerHTML == 'undefined'){
         input.value = ''
@@ -108,7 +108,7 @@ const consomeSessionStorage = () => {
             n.classList.remove('copiado')
         });
 
-        var linkCopiado = e.target.previousElementSibling.innerHTML;
+        let linkCopiado = e.target.previousElementSibling.innerHTML;
         navigator.clipboard.writeText(linkCopiado);
         e.target.innerHTML = 'Copied!';
         e.target.classList.add('copiado');
@@ -117,7 +117,7 @@ const consomeSessionStorage = () => {
  }
 
  const criaObjeto = async () => {
-    var item = JSON.stringify({
+    let item = JSON.stringify({
         link_original: input.value,
         link_resultado: await buscaUrl()
     })
@@ -126,20 +126,20 @@ const consomeSessionStorage = () => {
  }
 
  const novoEncurtadorItem = () => {
-     var novoItem = document.createElement('li');
+     let novoItem = document.createElement('li');
      novoItem.classList.add('encurtador__item')
      return novoItem;
  }
 
  const novoLinkOriginal = () => {
-    var linkOriginal = document.createElement('p');
+    let linkOriginal = document.createElement('p');
     linkOriginal.classList.add('encurtador__link-original');
     linkOriginal.innerHTML = input.value;
     return linkOriginal;
  }
 
  const LinkOriginalStorage = (original) => {
-    var linkOriginal = document.createElement('p');
+    let linkOriginal = document.createElement('p');
     linkOriginal.classList.add('encurtador__link-original');
     linkOriginal.innerHTML = original;
     return linkOriginal;
@@ -147,21 +147,21 @@ const consomeSessionStorage = () => {
  
 
 const novoLinkResultado = async () => {
-    var linkResultado = document.createElement('p');
+    let linkResultado = document.createElement('p');
     linkResultado.classList.add('encurtador__link-resultado');
     linkResultado.innerHTML = await buscaUrl();
     return linkResultado; 
 }
 
 const LinkResultadoStorage = (resultado) => {
-    var linkResultado = document.createElement('p');
+    let linkResultado = document.createElement('p');
     linkResultado.classList.add('encurtador__link-resultado');
     linkResultado.innerHTML = resultado;
     return linkResultado; 
 }
 
 const novoBotao = () => {
-    var novoBotaoCopiar = document.createElement('button');
+    let novoBotaoCopiar = document.createElement('button');
     novoBotaoCopiar.classList.add('encurtador__botao-copiar');
     novoBotaoCopiar.innerHTML = 'Copy';
     return novoBotaoCopiar;
