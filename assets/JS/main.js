@@ -57,11 +57,15 @@ const consomeSessionStorage = () => {
         let pLinkOriginal = LinkOriginalStorage(objeto.link_original);
         let pLinkResultado = LinkResultadoStorage(objeto.link_resultado); 
         let btn = novoBotao();
+        let btnExcluir = novoBotaoExcluir();
+
 
         listaLinks.appendChild(li);
         li.appendChild(pLinkOriginal);
         li.appendChild(pLinkResultado);
         li.appendChild(btn);
+        li.appendChild(btnExcluir);
+
 
         btn.addEventListener('click', function (e) {
             const botoes = document.querySelectorAll('.encurtador__botao-copiar')
@@ -74,6 +78,11 @@ const consomeSessionStorage = () => {
             e.target.innerHTML = 'Copied!';
             e.target.classList.add('copiado');
         })
+
+        btnExcluir.addEventListener('click', function(e) {
+            e.target.parentNode.remove();
+            localStorage.removeItem(pLinkResultado.innerHTML)
+        })
     }
 }
 
@@ -82,7 +91,8 @@ const consomeSessionStorage = () => {
     let li = novoEncurtadorItem();
     let pLinkOriginal = novoLinkOriginal();
     let pLinkResultado = await novoLinkResultado();
-    let btn = novoBotao();
+    let btn = novoBotao()
+    let btnExcluir = novoBotaoExcluir();
 
     if(pLinkResultado.innerHTML == 'undefined'){
         input.value = ''
@@ -94,6 +104,7 @@ const consomeSessionStorage = () => {
     li.appendChild(pLinkOriginal);
     li.appendChild(pLinkResultado);
     li.appendChild(btn);
+    li.appendChild(btnExcluir);
 
     localStorage.setItem(pLinkResultado.innerHTML, await criaObjeto()); 
     
@@ -164,6 +175,13 @@ const novoBotao = () => {
     let novoBotaoCopiar = document.createElement('button');
     novoBotaoCopiar.classList.add('encurtador__botao-copiar');
     novoBotaoCopiar.innerHTML = 'Copy';
+    return novoBotaoCopiar;
+}
+
+const novoBotaoExcluir = () => {
+    let novoBotaoCopiar = document.createElement('button');
+    novoBotaoCopiar.classList.add('encurtador__botao-excluir');
+    novoBotaoCopiar.innerHTML = 'Delete';
     return novoBotaoCopiar;
 }
 
